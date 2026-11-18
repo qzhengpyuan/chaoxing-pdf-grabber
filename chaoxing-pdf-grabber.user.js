@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         学习通 PDF 抓取助手（修复版）
 // @namespace    https://github.com/qzhengpyuan/chaoxing-pdf-grabber
-// @version      1.2.0
+// @version      1.2.1
 // @description  学习通章节页 PDF 直链提取与打包下载。非官方修复版：修复后台标签页 ZIP 假死与下载静默失败，新增设置/自检面板、单文件失败容错与字节校验。
 // @author       Acselerator
 // @author       维护：qzhengpyuan
@@ -38,7 +38,7 @@
   const APP = "cxpg";
   const APP_NAME = "chaoxing-pdf-grabber";
   // 与脚本头 @version 保持一致（发布前一起改）
-  const APP_VERSION = "1.2.0";
+  const APP_VERSION = "1.2.1";
   const STYLE_VERSION = "0.1.21";
   const ZIP_THRESHOLD_BYTES = 200 * 1024 * 1024;
   const ZIP_MAX_FILE_COUNT = 60;
