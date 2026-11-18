@@ -1,10 +1,15 @@
 ﻿# 学习通 PDF 抓取助手 (Chaoxing PDF Grabber)
 
-[![Greasy Fork](https://img.shields.io/badge/Greasy%20Fork-v1.1.0-blue.svg)](https://greasyfork.org/zh-CN/scripts/577167)
+[![ScriptCat](https://img.shields.io/badge/ScriptCat-v1.1.0-blue.svg)](https://scriptcat.org/zh-CN/script-show-page/9147)
 [![JavaScript](https://img.shields.io/badge/Language-JavaScript-yellow.svg)]()
 [![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
 
-一个运行在浏览器端的 **Tampermonkey / Violentmonkey** 用户脚本。采用纯前端架构，无需配置环境，无服务器参与。一键提取学习通/超星课程中可访问的高清 PDF 课件直链，并支持将全课或单独章节课件无损打包为 ZIP 下载，为您带来绝对安全、极简的离线学习体验。
+> **这是修复版 fork，不是原作者的官方版本。**
+> 原始项目：[Acselerator/chaoxing-pdf-grabber](https://github.com/Acselerator/chaoxing-pdf-grabber)（MIT，作者 Acselerator）。
+> 本仓库在它的基础上修复了「点全课 ZIP 后解析完没反应、不下载也不报错」等问题，改动清单见 [CHANGELOG](CHANGELOG.md)，上游 PR：[#1](https://github.com/Acselerator/chaoxing-pdf-grabber/pull/1)。
+> 如果上游合了 PR，请优先用上游版本。
+
+一个运行在浏览器端的 **Tampermonkey / Violentmonkey / ScriptCat** 用户脚本。采用纯前端架构，无需配置环境，无服务器参与。一键提取学习通/超星课程中可访问的高清 PDF 课件直链，并支持将全课或单独章节课件无损打包为 ZIP 下载，为您带来绝对安全、极简的离线学习体验。
 
 ---
 
@@ -24,8 +29,8 @@
 - **🔒 绝对隐私安全**：所有请求均在本地浏览器发起，利用您当前的合法登录态获取数据，不涉及任何第三方中转服务器及 Cookie 转移。
 - **💎 高清无损提取**：直接获取官方 CDN 原始 PDF 直链，拒绝画质受损的截图拼接，100% 保留原本质量与文本可复制性。
 - **🗂️ 一键智能打包**：支持按小节下载、按大章生成 ZIP、按全课生成 ZIP。ZIP 内自动生成嵌套的课程/章节目录结构，解压不凌乱。
-- **🧩 单个失败不拖垮整包**：某个 PDF 下载失败（资源被删、偶发超时）时会跳过它继续打包，结束后告知跳过了几个并导出一份「失败清单 .txt」，方便补下。
-- **🔍 下载字节数校验**：每个 PDF 落盘前比对响应的 `Content-Length` 与实收字节数，传输被截断会记进控制台并计入失败清单，不再把半截文件当成功。
+- **🧩 单个失败不拖垮整包**：某个 PDF 下载失败（资源被删、偶发超时）时会跳过它继续打包，结束后告知跳过了几个，失败条目的直链打印在控制台，方便补下。
+- **🔍 下载字节数校验**：每个 PDF 落盘前比对响应的 `Content-Length` 与实收字节数，传输被截断会记进控制台，不再把半截文件当成功。
 - **⚙️ 设置与自检面板**：工具栏「设置」里能看到脚本版本、识别到的章/节数量、元数据缓存条数，一键清缓存；「接口自检」会对第一个有课件的小节跑一次真实解析并给出耗时与体积，用来区分「接口解析失败」和「下载环节失败」。
 - **🛡️ OOM 内存防崩机制**：内置超大体积打包防崩溃机制。对于体积超大（例如 >200MB）的课件合集，脚本会智能预判并拦截，提供“**导出直链清单 (.txt)**”的安全降级方案，避免浏览器卡顿或崩溃。
 
@@ -40,10 +45,14 @@
 - [Violentmonkey (暴力猴)](https://violentmonkey.github.io/)
 
 ### 2. 安装本脚本
-推荐直接从 Greasy Fork 安装，以获取自动更新及最佳体验：
-👉 **[点击此处前往 Greasy Fork 安装](https://greasyfork.org/zh-CN/scripts/577167)**
+本仓库是修复版，安装地址（任选其一）：
 
-> 也可以在脚本管理器中新建脚本，将本项目内 `chaoxing-pdf-grabber.user.js` 的源码复制粘贴进去并保存。
+- **脚本猫（推荐，国内访问快）**：👉 [学习通 PDF 抓取助手（修复版）](https://scriptcat.org/zh-CN/script-show-page/9147)
+- **GitHub 仓库**：<https://github.com/qzhengpyuan/chaoxing-pdf-grabber>（源码、更新日志、Issue）
+- **直接安装本仓库版本**：👉 [chaoxing-pdf-grabber.user.js](https://raw.githubusercontent.com/qzhengpyuan/chaoxing-pdf-grabber/main/chaoxing-pdf-grabber.user.js)
+
+> 上游原版：<https://greasyfork.org/zh-CN/scripts/577167>（未含本仓库的修复）。
+> 也可以在脚本管理器中新建脚本，把本仓库 `chaoxing-pdf-grabber.user.js` 的源码粘贴进去并保存。
 
 ## 🚀 使用指南
 

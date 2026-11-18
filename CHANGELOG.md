@@ -1,5 +1,9 @@
 # 更新日志
 
+> 本仓库是 [Acselerator/chaoxing-pdf-grabber](https://github.com/Acselerator/chaoxing-pdf-grabber) 的修复版 fork（MIT）。
+> 1.0.0 及之前的条目来自上游；1.0.1 起为本仓库改动。
+
+
 ## 1.1.0
 
 **工程**
