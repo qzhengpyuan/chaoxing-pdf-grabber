@@ -1,6 +1,6 @@
 {
   "name": "chaoxing-pdf-grabber",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": true,
   "description": "学习通 PDF 抓取助手（用户脚本）——单元测试与端到端测试",
   "type": "module",

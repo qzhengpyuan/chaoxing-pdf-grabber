@@ -13,7 +13,7 @@ test.after(() => api.__closeChannels());
 
 test("主体可以求值（防 TDZ 回归：初始化阶段引用模块级 const 会抛 ReferenceError）", async () => {
   assert.ok(api.sanitizeFileName("a.pdf"));
-  assert.equal(api.APP_VERSION, "1.1.0");
+  assert.equal(api.APP_VERSION, "1.2.0");
 });
 
 test("脚本头 @version 与 APP_VERSION 一致，STYLE_VERSION 有值", async () => {

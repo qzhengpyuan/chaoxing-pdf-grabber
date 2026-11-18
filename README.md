@@ -1,6 +1,6 @@
 ﻿# 学习通 PDF 抓取助手 (Chaoxing PDF Grabber)
 
-[![ScriptCat](https://img.shields.io/badge/ScriptCat-v1.1.0-blue.svg)](https://scriptcat.org/zh-CN/script-show-page/9147)
+[![ScriptCat](https://img.shields.io/badge/ScriptCat-v1.2.0-blue.svg)](https://scriptcat.org/zh-CN/script-show-page/9147)
 [![JavaScript](https://img.shields.io/badge/Language-JavaScript-yellow.svg)]()
 [![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
 
