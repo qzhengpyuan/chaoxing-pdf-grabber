@@ -48,6 +48,7 @@
 本仓库是修复版，安装地址（任选其一）：
 
 - **脚本猫（推荐，国内访问快）**：👉 [学习通 PDF 抓取助手（修复版）](https://scriptcat.org/zh-CN/script-show-page/9147)
+- **GreasyFork**：👉 [学习通 PDF 抓取助手（修复版）](https://greasyfork.org/zh-CN/scripts/606586)（更新经 webhook 自动同步）
 - **GitHub 仓库**：<https://github.com/qzhengpyuan/chaoxing-pdf-grabber>（源码、更新日志、Issue）
 - **直接安装本仓库版本**：👉 [chaoxing-pdf-grabber.user.js](https://raw.githubusercontent.com/qzhengpyuan/chaoxing-pdf-grabber/main/chaoxing-pdf-grabber.user.js)
 
